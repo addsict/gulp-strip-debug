@@ -12,6 +12,6 @@ it('should strip debugging', function (cb) {
 	});
 
 	stream.write(new gutil.File({
-		contents: new Buffer('function test(){debugger;}')
+		contents: new Buffer('function test(){console.log("test");}')
 	}));
 });

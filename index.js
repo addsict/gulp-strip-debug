@@ -1,7 +1,7 @@
 'use strict';
 var gutil = require('gulp-util');
 var through = require('through2');
-var stripDebug = require('strip-debug');
+var stripConsole = require('rocambole-strip-console');
 
 module.exports = function () {
 	return through.obj(function (file, enc, cb) {
@@ -16,7 +16,7 @@ module.exports = function () {
 		}
 
 		try {
-			file.contents = new Buffer(stripDebug(file.contents.toString()).toString());
+			file.contents = new Buffer(stripConsole(file.contents.toString()).toString());
 			this.push(file);
 		} catch (err) {
 			this.emit('error', new gutil.PluginError('gulp-strip-debug', err, {fileName: file.path}));
