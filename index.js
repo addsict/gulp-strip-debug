@@ -12,7 +12,7 @@ module.exports = function () {
 		}
 
 		if (file.isStream()) {
-			cb(new gutil.PluginError('gulp-strip-debug', 'Streaming not supported'));
+			cb(new gutil.PluginError('gulp-strip-debug-only-console', 'Streaming not supported'));
 			return;
 		}
 
@@ -26,7 +26,7 @@ module.exports = function () {
 			file.contents = new Buffer(stripFunc(file.contents.toString()).toString());
 			this.push(file);
 		} catch (err) {
-			this.emit('error', new gutil.PluginError('gulp-strip-debug', err, {fileName: file.path}));
+			this.emit('error', new gutil.PluginError('gulp-strip-debug-only-console', err, {fileName: file.path}));
 		}
 
 		cb();

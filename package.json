@@ -1,9 +1,9 @@
 {
-  "name": "gulp-strip-debug",
+  "name": "gulp-strip-debug-only-console",
   "version": "1.0.2",
   "description": "Strip console and debugger statements from JavaScript code",
   "license": "MIT",
-  "repository": "sindresorhus/gulp-strip-debug",
+  "repository": "addsict/gulp-strip-debug-only-console",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
