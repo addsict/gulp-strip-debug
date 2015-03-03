@@ -1,4 +1,4 @@
-# gulp-strip-debug [![Build Status](https://travis-ci.org/sindresorhus/gulp-strip-debug.svg?branch=master)](https://travis-ci.org/sindresorhus/gulp-strip-debug)
+# gulp-strip-debug-only-console [![Build Status](https://travis-ci.org/sindresorhus/gulp-strip-debug.svg?branch=master)](https://travis-ci.org/sindresorhus/gulp-strip-debug)
 
 > Strip `console`, `alert`, and `debugger` statements from JavaScript code with [strip-debug](https://github.com/sindresorhus/strip-debug)
 
@@ -14,7 +14,7 @@ $ npm install --save-dev gulp-strip-debug
 
 ```js
 var gulp = require('gulp');
-var stripDebug = require('gulp-strip-debug');
+var stripDebug = require('gulp-strip-debug-only-console');
 
 gulp.task('default', function () {
 	return gulp.src('src/app.js')
