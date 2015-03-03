@@ -7,7 +7,7 @@ it('should strip debugging', function (cb) {
 	var stream = stripDebug();
 
 	stream.on('data', function (file) {
-		assert.equal(file.contents.toString(), 'function test(){}');
+		assert.equal(file.contents.toString(), 'function test(){void 0;}');
 		cb();
 	});
 
